@@ -4,16 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#515151"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -27,15 +19,121 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewToolbarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="Rechner"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimalWertEins"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Wert 1"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimalWertZwei"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Wert 2"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonMulti"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="*"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonDivide"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="/"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <Button
+        android:id="@+id/buttonMR"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#A1A1A1"
+        android:text="MR"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <Button
+        android:id="@+id/buttonBerechnen"
+        android:layout_width="195dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#A1A1A1"
+        android:text="BERECHNEN"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <Button
+        android:id="@+id/buttonMS"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#A1A1A1"
+        android:text="MS"
+        android:textColor="#FF0000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="445dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
