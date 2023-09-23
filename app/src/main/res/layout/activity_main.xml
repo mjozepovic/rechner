@@ -22,118 +22,157 @@
         android:id="@+id/textViewToolbarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Rechner"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextNumberDecimalWertEins"
         android:layout_width="329dp"
         android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Wert 1"
         android:inputType="numberDecimal"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <EditText
-        android:id="@+id/editTextNumberDecimalWertZwei"
-        android:layout_width="329dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:hint="Wert 2"
-        android:inputType="numberDecimal"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="272dp" />
+    <RadioGroup
+        android:id="@+id/operation_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertEins">
 
-    <RadioButton
-        android:id="@+id/radioButtonPlus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="+"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="201dp" />
+        <RadioButton
+            android:id="@+id/radioButtonPlus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="+"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertEins" />
 
-    <RadioButton
-        android:id="@+id/radioButtonMinus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="-"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="201dp" />
+        <RadioButton
+            android:id="@+id/radioButtonMinus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonPlus"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertEins" />
 
-    <RadioButton
-        android:id="@+id/radioButtonMulti"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="*"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="201dp" />
+        <RadioButton
+            android:id="@+id/radioButtonMulti"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="*"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonMinus"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertEins" />
 
-    <RadioButton
-        android:id="@+id/radioButtonDivide"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="/"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="201dp" />
+        <RadioButton
+            android:id="@+id/radioButtonDivide"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="/"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonMulti"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertEins" />
 
-    <Button
-        android:id="@+id/buttonMR"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#A1A1A1"
-        android:text="MR"
-        android:textColor="#000000"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:cornerRadius="0dp"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="333dp" />
-
-    <Button
-        android:id="@+id/buttonBerechnen"
-        android:layout_width="195dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#A1A1A1"
-        android:text="BERECHNEN"
-        android:textColor="#000000"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:cornerRadius="0dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="335dp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/buttonMS"
         android:layout_width="65dp"
         android:layout_height="65dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#A1A1A1"
         android:text="MS"
         android:textColor="#FF0000"
         android:textSize="8sp"
         android:textStyle="bold"
         app:cornerRadius="0dp"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttonBerechnen"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertZwei" />
+
+    <Button
+        android:id="@+id/buttonBerechnen"
+        android:layout_width="195dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#A1A1A1"
+        android:text="BERECHNEN"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertZwei" />
+
+    <Button
+        android:id="@+id/buttonMR"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#A1A1A1"
+        android:text="MR"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonMS"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalWertZwei" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewErgebnis"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#0017FF"
         android:text="0"
         android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="445dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBerechnen" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimalWertZwei"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Wert 2"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operation_radio_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
