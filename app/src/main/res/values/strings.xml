@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rechner</string>
+    <string name="saved">Gespeichert</string>
 </resources>
